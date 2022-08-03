@@ -20,7 +20,7 @@ function App() {
 	return (
 		<>
 			<Provider store={store}>
-				<BrowserRouter basename="/api-core-erp">
+				<BrowserRouter basename="/">
 					<PersistGate loading={null} persistor={persistor}>
 						<AppTerritory />
 					</PersistGate>

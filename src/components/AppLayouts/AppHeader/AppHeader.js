@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Dropdown, Button } from 'react-bootstrap';
 import { RiNotification3Line } from 'react-icons/ri';
 import { BsChatDots } from 'react-icons/bs';
-import { CgMenuRight } from 'react-icons/cg';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Divide as Hamburger } from 'hamburger-react';
 
 const AppHeader = () => {

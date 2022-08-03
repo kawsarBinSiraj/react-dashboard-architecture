@@ -5,7 +5,7 @@ const Dashboard = () => {
 	return (
 		<>
 			<AppHelmet title="Dashboard" />
-			<h1 className="display-5 text-theme-color">Hello World !</h1>
+			<h1 className="display-5 text-theme-color">Welcome to API ERP !</h1>
 		</>
 	);
 };

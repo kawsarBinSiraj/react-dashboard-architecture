@@ -22,19 +22,16 @@ const Routes = () => {
 					<Route path="" element={<Dashboard />} />
 				</Route>
 
-				{/* finance module routes */}
 				<Route path="/finance" element={<ProtectedRoute isAuth={true} redirectTo="/login" />}>
 					<Route path="loan-management" element={<LoanManagement />} />
 					<Route path="bank-management" element={<BankManagement />} />
 				</Route>
 
-				{/* hrm module routes */}
 				<Route path="/hrm" element={<ProtectedRoute isAuth={true} redirectTo="/login" />}>
 					<Route path="docs-management" element={<DocsManagement />} />
 				</Route>
 
 
-				{/* global settings routes */}
 				<Route path="/global-settings" element={<ProtectedRoute isAuth={true} redirectTo="/login" />}>
 					<Route path="theme-settings" element={<ThemeSettings />} />
 				</Route>
