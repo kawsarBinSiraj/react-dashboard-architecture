@@ -1,0 +1,161 @@
+/**
+ * @app scss for (Template/Project Name)
+ * @project     - API Core ERP
+ * @author      - 
+ * @created_by  - kawsar bin siraj
+ * @created_at  - 20-07-2022
+ * @modified_by -
+ */
+
+/* reset, root */
+*:focus {
+	box-shadow: none !important;
+}
+
+:root {
+	--h: 263;
+	--s: 76%;
+	--l: 43%;
+	--theme-color: hsl(var(--h), var(--s), var(--l));
+	--theme-color-alfa-10: hsl(var(--h), var(--s), var(--l), 0.1);
+	--theme-color-alfa-25: hsl(var(--h), var(--s), var(--l), 0.25);
+	--theme-color-alfa-50: hsl(var(--h), var(--s), var(--l), 0.5);
+	--theme-palate-1: hsl(calc(var(--h) + 70), calc(var(--s) - 14%), calc(var(--l) + 12%));
+	--theme-palate-2: hsl(calc(var(--h) - 178), calc(var(--s) + 0%), calc(var(--l) + 0%));
+	--theme-palate-3: hsl(calc(var(--h) + 120), calc(var(--s) + 0%), calc(var(--l) + 0%));
+	--theme-gradient: linear-gradient(to left, var(--theme-palate-1), var(--theme-color));
+	--theme-gradient-alfa: linear-gradient(to left, var(--theme-color-alfa-10), var(--theme-color-alfa-50));
+	--theme-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+	--navigation-width: 275px;
+	--header-height: 60px;
+	--theme-gutter: 15px;
+	--theme-radius: 3px;
+	--theme-fontInit-size: 14px;
+	--theme-fontInit-weight: 400;
+	--theme-transition-duration: 0.3s;
+	--theme-transition-function: cubic-bezier(0.75, 0.94, 0.24, 1.22);
+	--theme-transition: all calc(var(--theme-transition-duration) + 0.3s) var(--theme-transition-function);
+	--theme-btn-min-size: 90px;
+}
+
+body {
+	font-weight: var(--theme-fontInit-weight);
+	font-size: var(--theme-fontInit-size);
+}
+
+.rounded {
+	border-radius: var(--theme-radius) !important;
+}
+.form-control,
+.form-select {
+	font-size: var(--theme-fontInit-size);
+	&:focus {
+		border-color: var(--theme-color) !important;
+	}
+}
+
+.btn {
+	font-size: var(--theme-fontInit-size);
+
+	&.btn-erp {
+		min-width: var(--theme-btn-min-size);
+	}
+}
+
+/* reset, root -END */
+
+/* helper classes */
+.fw-semi-bold {
+	font-weight: 600;
+}
+
+.header-height {
+	height: var(--header-height);
+}
+
+.text-theme-color {
+	color: var(--theme-color);
+}
+.text-palate-1 {
+	color: var(--theme-palate-1);
+}
+.text-palate-2 {
+	color: var(--theme-palate-2);
+}
+.text-palate-3 {
+	color: var(--theme-palate-3);
+}
+
+.bg-theme-color {
+	background-color: var(--theme-color);
+}
+.bg-theme-color-alfa-10 {
+	background-color: var(--theme-color-alfa-10);
+}
+.bg-theme-color-alfa-25 {
+	background-color: var(--theme-color-alfa-25);
+}
+.bg-theme-color-alfa-50 {
+	background-color: var(--theme-color-alfa-50);
+}
+.bg-theme-palate-1 {
+	background-color: var(--theme-palate-1);
+}
+.bg-theme-palate-2 {
+	background-color: var(--theme-palate-2);
+}
+.bg-theme-palate-3 {
+	background-color: var(--theme-palate-3);
+}
+.bg-theme-gradient {
+	background: var(--theme-gradient);
+}
+.bg-theme-gradient-alfa {
+	background: var(--theme-gradient-alfa);
+}
+
+.theme-shadow {
+	box-shadow: var(--theme-shadow);
+}
+
+.border-theme-color {
+	--bs-border-color: var(--theme-color);
+}
+.border-theme-color-alfa-25 {
+	--bs-border-color: var(--theme-color-alfa-25);
+}
+.border-theme-color-alfa-50 {
+	--bs-border-color: var(--theme-color-alfa-50);
+}
+
+.theme-card-title {
+	font-size: calc(var(--theme-fontInit-size) + 6px);
+}
+.theme-page-title {
+	font-size: calc(var(--theme-fontInit-size) + 9px);
+}
+
+/* helper classes -END */
+
+/* layout style */
+#app-header {
+	margin-top: var(--theme-gutter);
+	margin-right: var(--theme-gutter);
+	max-width: calc(100% - (var(--navigation-width) + var(--theme-gutter) * 2));
+	transition: var(--theme-transition);
+	width: 100%;
+}
+#app-navigation {
+	width: var(--navigation-width);
+	transition: var(--theme-transition);
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+#dashboard {
+	padding-top: calc(var(--header-height) + var(--theme-gutter) * 2);
+	padding-left: calc(var(--navigation-width) + var(--theme-gutter));
+	padding-right: var(--theme-gutter);
+	transition: all calc(var(--theme-transition-duration) + 0.42s) var(--theme-transition-function);
+}
+/* layout style -END */
