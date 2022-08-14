@@ -31,7 +31,6 @@ const Routes = () => {
 					<Route path="docs-management" element={<DocsManagement />} />
 				</Route>
 
-
 				<Route path="/global-settings" element={<ProtectedRoute isAuth={true} redirectTo="/login" />}>
 					<Route path="theme-settings" element={<ThemeSettings />} />
 				</Route>

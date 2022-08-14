@@ -21,7 +21,7 @@ const PageTitle = ({ title, children, ...props }) => {
 const CardTitle = ({ title, children, ...props }) => {
 	return (
 		<div {...props}>
-			<h5 className="mb-0 theme-card-title d-flex align-items-center gap-2 fw-normal">
+			<h5 className="mb-0 theme-card-title d-flex align-items-center gap-2 fw-semi-fold">
 				{children} {title}
 			</h5>
 		</div>

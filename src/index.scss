@@ -15,11 +15,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-family: 'Work Sans', sans-serif;
-	min-height: 100vh;
-	background: url(./assets/img/blue-abstract-gradient.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	overflow-x: hidden;
 	code {
 		font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 	}

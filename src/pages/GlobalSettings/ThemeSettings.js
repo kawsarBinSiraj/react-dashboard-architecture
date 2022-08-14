@@ -5,7 +5,7 @@ const ThemeSettings = () => {
 	return (
 		<>
 			<div className="row">
-				<div className="col-xxl-5 col-xl-6 col-lg-8">
+				<div className="col-xxl-7 col-xl-7 col-lg-8">
 					<TSettings />
 				</div>
 			</div>

@@ -6,13 +6,19 @@ import { Link, NavLink } from 'react-router-dom';
 import { RiSeedlingLine, RiBubbleChartLine } from 'react-icons/ri';
 import { AiOutlineLineChart, AiOutlinePieChart } from 'react-icons/ai';
 import { GoHome, GoPrimitiveDot } from 'react-icons/go';
+import { useSelector } from 'react-redux';
 
 const AppNavigation = () => {
+	const { isThemeDarkMode } = useSelector((store) => store?.globalSettingsReducer);
 	return (
 		<>
-			<div id="app-navigation" className="position-fixed overflow-hidden start-0 top-0 p-3 bg-theme-color">
-				<Link to={'/'} className="logo mb-2 text-light text-decoration-none d-inline-flex align-items-center display-5 mb-0" style={{ height: 'calc(var(--header-height) + 0px)' }}>
-					<span className='text-nowrap'>ERP</span>
+			<div id="app-navigation" className={`position-fixed theme-shadow overflow-hidden start-0 top-0 p-3 bg-theme-color ${isThemeDarkMode === true && 'dark-mode'}`}>
+				<Link
+					to={'/'}
+					className="logo flex-shrink-0 mb-2 text-decoration-none d-inline-flex align-items-center display-5 mb-0"
+					style={{ height: 'calc(var(--header-height) + 0px)' }}
+				>
+					<span className="text-nowrap">ERP</span>
 				</Link>
 				<Nav className="flex-column ps-1 align-items-start">
 					<Nav.Link as={NavLink} to={'/'}>

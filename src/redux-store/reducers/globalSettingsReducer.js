@@ -1,3 +1,4 @@
+import _ from 'lodash';
 // initialState
 const initialState = {};
 
@@ -11,6 +12,11 @@ function globalSettingsReducer(state = initialState, action) {
 				...state,
 				selectedThemeColor: color,
 			};
+		case 'SET_THEME_FONT_COLOR':
+			return {
+				...state,
+				selectedFontColor: action?.payload,
+			};
 		case 'SET_THEME_FONT':
 			let { font } = action?.payload;
 			return {
@@ -21,32 +27,61 @@ function globalSettingsReducer(state = initialState, action) {
 			let { navWidth } = action?.payload;
 			return {
 				...state,
-				selectedNavWidth: navWidth,
+				selectedNavWidth: parseInt(navWidth),
 			};
 		case 'SET_THEME_GUTTER':
-			let { gutter } = action?.payload;
+			let { gutter, isGutterOnlyBody } = action?.payload;
 			return {
 				...state,
-				selectedGutter: gutter,
+				isGutterOnlyBody,
+				selectedGutter: parseInt(gutter),
 			};
 		case 'SET_THEME_RADIUS':
 			let { radius } = action?.payload;
 			return {
 				...state,
-				selectedRadius: radius,
+				selectedRadius: parseInt(radius),
 			};
 		case 'SET_THEME_FONT_SIZE':
 			let { fontSize } = action?.payload;
 			return {
 				...state,
-				selectedFontSize: fontSize,
+				selectedFontSize: parseInt(fontSize),
 			};
 		case 'NAVIGATION_COLLAPSED':
 			return {
 				...state,
 				isNavCollapsed: action?.payload,
 			};
+		case 'SET_THEME_MODE':
+			return {
+				...state,
+				isThemeDarkMode: action?.payload,
+			};
+		case 'INCREASE_FONT_SIZE':
+			return {
+				...state,
+				selectedFontSize: !_.isNil(state?.selectedFontSize) ? parseInt(state?.selectedFontSize) + 2 : 16,
+			};
+		case 'DECREASE_FONT_SIZE':
+			return {
+				...state,
+				selectedFontSize: !_.isNil(state?.selectedFontSize) ? parseInt(state?.selectedFontSize) - 2 : 16,
+			};
+		case 'RESET_FONT_SIZE':
+			return {
+				...state,
+				selectedFontSize: 14,
+			};
+		case 'SET_HEADER_POSITION':
+			let { position } = action?.payload;
+			return {
+				...state,
+				selectedHeaderPosition: position,
+			};
 
+		case 'GLOBAL_SETTING_REDUCER_RESET':
+			return initialState;
 		default:
 			// If this reducer doesn't recognize the action type, or doesn't
 			// care about this specific action, return the existing state unchanged

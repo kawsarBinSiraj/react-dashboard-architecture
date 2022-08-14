@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/api-core-erp/static/css/main.919164ba.chunk.css",
+    "main.js": "/api-core-erp/static/js/main.e6e3910b.chunk.js",
+    "main.js.map": "/api-core-erp/static/js/main.e6e3910b.chunk.js.map",
+    "runtime-main.js": "/api-core-erp/static/js/runtime-main.17c873fe.js",
+    "runtime-main.js.map": "/api-core-erp/static/js/runtime-main.17c873fe.js.map",
+    "static/css/2.66f0f07b.chunk.css": "/api-core-erp/static/css/2.66f0f07b.chunk.css",
+    "static/js/2.911e8814.chunk.js": "/api-core-erp/static/js/2.911e8814.chunk.js",
+    "static/js/2.911e8814.chunk.js.map": "/api-core-erp/static/js/2.911e8814.chunk.js.map",
+    "static/js/3.a3826c65.chunk.js": "/api-core-erp/static/js/3.a3826c65.chunk.js",
+    "static/js/3.a3826c65.chunk.js.map": "/api-core-erp/static/js/3.a3826c65.chunk.js.map",
+    "index.html": "/api-core-erp/index.html",
+    "static/css/2.66f0f07b.chunk.css.map": "/api-core-erp/static/css/2.66f0f07b.chunk.css.map",
+    "static/css/main.919164ba.chunk.css.map": "/api-core-erp/static/css/main.919164ba.chunk.css.map",
+    "static/js/2.911e8814.chunk.js.LICENSE.txt": "/api-core-erp/static/js/2.911e8814.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/api-core-erp/static/media/blue-abstract-gradient.2fe741ff.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.17c873fe.js",
+    "static/css/2.66f0f07b.chunk.css",
+    "static/js/2.911e8814.chunk.js",
+    "static/css/main.919164ba.chunk.css",
+    "static/js/main.e6e3910b.chunk.js"
+  ]
+}
